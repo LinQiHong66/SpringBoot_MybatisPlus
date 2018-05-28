@@ -7,6 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
+
 /**
  * <p>
  * 前端控制器
@@ -32,5 +34,11 @@ public class StudentController {
         boolean res = iStudentService.insert(student);
 
         return res ? "success" : "fail";
+    }
+
+    @RequestMapping("/hello2")
+    @ResponseBody
+    public List<Student> hello2() {
+        return iStudentService.selectStudentByStuName("linqihong");
     }
 }
