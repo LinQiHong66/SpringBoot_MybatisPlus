@@ -26,8 +26,8 @@ public class StudentController {
     public String hello() {
         //insert
         Student student = new Student()
-                .setStuName("linqihong")
-                .setStuNumber("15218612811")
+                .setStuName("zhangsan")
+                .setStuNumber("54")
                 .setAge(23);
         boolean res = iStudentService.insert(student);
 
